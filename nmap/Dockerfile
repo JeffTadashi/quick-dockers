@@ -8,7 +8,7 @@ RUN \
 apk update && \
 apk add --upgrade --no-cache nmap
 
-WORKDIR /root/
+WORKDIR /root
 
 ENTRYPOINT ["nmap"]
 
