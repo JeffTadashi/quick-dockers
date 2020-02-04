@@ -10,8 +10,8 @@ apk add --upgrade --no-cache git python3 && \
 git clone https://github.com/maurosoria/dirsearch /root/dirsearch && \
 apk del git
 
-WORKDIR /root/dirsearch/
+WORKDIR /root/dirsearch
 
-ENTRYPOINT ["/root/dirsearch/dirsearch.py"]
+ENTRYPOINT ["./dirsearch.py"]
 
 CMD [ "-h"]

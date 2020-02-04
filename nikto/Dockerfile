@@ -10,7 +10,7 @@ apk add --upgrade --no-cache git perl perl-net-ssleay && \
 git clone https://github.com/sullo/nikto.git /root/nikto && \
 apk del git
 
-WORKDIR root/nikto/program
+WORKDIR /root/nikto/program
 
 ENTRYPOINT ["./nikto.pl"]
 
