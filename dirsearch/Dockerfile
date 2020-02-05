@@ -7,10 +7,11 @@ https://github.com/JeffTadashi"
 RUN \
 apk update && \
 apk add --upgrade --no-cache git python3 && \
-git clone https://github.com/maurosoria/dirsearch /root/dirsearch && \
+git clone https://github.com/maurosoria/dirsearch /tmp/dirsearch && \
+mv /tmp/dirsearch/* /root && \
 apk del git
 
-WORKDIR /root/dirsearch
+WORKDIR /root
 
 ENTRYPOINT ["./dirsearch.py"]
 
