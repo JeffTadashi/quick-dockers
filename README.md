@@ -3,7 +3,11 @@ Hello!
 
 This is my collection of quick docker images for running simple network/security tools, without needed to hassle with manual installation, getting Python/Perl/Go dependencies installed, building, etc.
 
-Simply install docker on your machine, then you can run like the following example:
+Some features include:
+- Minimal image/download sizes
+- Consistenty in usage across all tools (same working directories, base OS, etc)
+
+Simply install docker on your machine, then you can run the tools like the following example:
 ```
 docker run --rm jefftadashi/nmap example.com
 ```
