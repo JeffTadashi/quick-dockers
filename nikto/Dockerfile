@@ -7,10 +7,12 @@ https://github.com/JeffTadashi"
 RUN \
 apk update && \
 apk add --upgrade --no-cache git perl perl-net-ssleay && \
-git clone https://github.com/sullo/nikto.git /root/nikto && \
+git clone https://github.com/sullo/nikto.git /tmp/nikto && \
+mv /tmp/nikto/program/* /root && \
+rm -r /tmp/* && \
 apk del git
 
-WORKDIR /root/nikto/program
+WORKDIR /root
 
 ENTRYPOINT ["./nikto.pl"]
 
