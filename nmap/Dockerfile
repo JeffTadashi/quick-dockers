@@ -6,7 +6,7 @@ https://github.com/JeffTadashi"
 
 RUN \
 apk update && \
-apk add --upgrade --no-cache nmap
+apk add --upgrade --no-cache nmap nmap-scripts
 
 WORKDIR /root
 
