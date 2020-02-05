@@ -13,6 +13,6 @@ apk del git
 
 WORKDIR /root
 
-ENTRYPOINT ["python3 sqlmap.py"]
+ENTRYPOINT ["/usr/bin/python3", "/root/sqlmap.py"]
 
 CMD [ "-hh"]
