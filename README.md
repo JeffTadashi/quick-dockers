@@ -25,16 +25,14 @@ From your command line or terminal, you can run the following (just substitute "
 ```
 docker run --rm jefftadashi/nmap -p1-500 example.com
 ```
-For mounting volumes to pass files to/from the your current directory, try the following:
+For mounting volumes to pass files to/from your current directory, try the following:
 ```
-[Linux/MacOS]
-docker run --rm -v {pwd):/root jefftadashi/nmap -p1-500 example.com
+[Linux/MacOS/Powershell]
+docker run --rm -v $(pwd):/root jefftadashi/nmap -p1-500 example.com
+docker run --rm -v ${PWD}:/root jefftadashi/nmap -p1-500 example.com
 
 [Windows CMD]
 docker run --rm -v %cd%:/root jefftadashi/nmap -p1-500 example.com
-
-[Windows Powershell]
-docker run --rm -v {PWD):/root jefftadashi/nmap -p1-500 example.com
 ```
 
 ## Image List
@@ -43,6 +41,7 @@ See all the folders in this repository for the docker images that are available,
 
 Name | Description
 --- | ---
+altdns | Find subdomains based on patterns
 dirsearch | Brute-force find directories in web servers
 evil-winrm | Shell through WinRM services 
 ldapsearch | Search LDAP directories
@@ -50,7 +49,7 @@ nikto | Scan web servers for vulnerabilities
 nmap | Network port scanner (with included scripts)
 smbclient | SMB protocol client
 sqlmap | Find/exploit SQL injection vulnerabilities in web servers
-subfinder | Find all subdomains
+subfinder | Find subdomains based on external sources
 whatweb | Web scanner to identify running services
 
 ## Links
