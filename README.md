@@ -14,3 +14,16 @@ docker run --rm jefftadashi/nmap example.com
 ```
 See all the folders in this repository for the docker images that are available. Also check out my docker hub directly at:
 - https://hub.docker.com/u/jefftadashi
+
+## Image List
+
+Name | Description
+--- | ---
+dirsearch | Brute-force find directories in web servers
+ldapsearch | Search LDAP directories
+nikto | Scan web servers for vulnerabilities
+nmap | Network port scanner (with included scripts)
+smbclient | SMB protocol client
+sqlmap | Find/exploit SQL injection vulnerabilities in web servers
+subfinder | Find all subdomains
+whatweb | Web scanner to identify running services
