@@ -8,12 +8,12 @@ RUN \
 apk update && \
 apk add --upgrade --no-cache git go && \
 go get github.com/projectdiscovery/subfinder/cmd/subfinder && \
-mv /root/go/bin/subfinder /root && \
+mv /root/go/bin/subfinder /usr/local/bin && \
 rm -r /root/go && \
 apk del git go
 
 WORKDIR /root
 
-ENTRYPOINT ["./subfinder"]
+ENTRYPOINT ["subfinder"]
 
 CMD [ "-h"]

@@ -3,14 +3,38 @@
 This is my collection of easy-to-use docker images for running simple network/security tools, without needing to hassle with manual installation, getting Python/Perl/Go dependencies installed, building, etc.
 
 ## Features 
-Some features include:
+- Easy-to-use, with full guide here (even if you've never used Linux!)
 - Minimal image/download sizes
-- Consistenty in usage across all tools (same working directories, base OS, etc)
+- Consistent image OS: All Alpine Linux (latest stable)
+- Consistent directory structure: `/root` as clean working directory for all, `/opt/tool-name` as tool's main install folder
+
+## Install Docker (for Newbies)
+Install docker on your machine, and start its services. For Windows/OSX, use Docker Desktop:
+- https://www.docker.com/products/docker-desktop  
+
+For Linux hosts, you can install and auto-start services like the following Ubuntu example:
+```
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker your-local-username-here
+```
 
 ## Usage
-Simply install docker on your machine, then you can run the tools like the following example:
+From your command line or terminal, you can run the following (just substitute "nmap" with whatever image is available in the list, and specify whatever parameters afterwards)
 ```
-docker run --rm jefftadashi/nmap example.com
+docker run --rm jefftadashi/nmap -p1-500 example.com
+```
+For mounting volumes to pass files to/from the your current directory, try the following:
+```
+[Linux/MacOS]
+docker run --rm -v {pwd):/root jefftadashi/nmap -p1-500 example.com
+
+[Windows CMD]
+docker run --rm -v %cd%:/root jefftadashi/nmap -p1-500 example.com
+
+[Windows Powershell]
+docker run --rm -v {PWD):/root jefftadashi/nmap -p1-500 example.com
 ```
 
 ## Image List
@@ -33,3 +57,7 @@ whatweb | Web scanner to identify running services
 
 GitHub: https://github.com/JeffTadashi/quick-dockers  
 Docker Hub: https://hub.docker.com/u/jefftadashi
+
+## Feedback
+
+I would appreciate any and all feedback! And I am happy to add other useful tools to this repository, just let me know.
