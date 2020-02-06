@@ -2,7 +2,7 @@ FROM alpine:latest
 LABEL description="WhatWeb\
 Authored by JeffTadashi\
 https://hub.docker.com/u/jefftadashi\
-https://github.com/JeffTadashi"
+https://github.com/JeffTadashi/quick-dockers"
 
 RUN \
 apk update && \
@@ -12,7 +12,7 @@ mv /tmp/whatweb/* /root && \
 cd /root && \
 gem install bundler && \
 bundle install && \
-apk del git build-base
+apk del git ruby-dev build-base
 
 WORKDIR /root
 

@@ -2,7 +2,7 @@ FROM alpine:latest
 LABEL description="Dirsearch\
 Authored by JeffTadashi\
 https://hub.docker.com/u/jefftadashi\
-https://github.com/JeffTadashi"
+https://github.com/JeffTadashi/quick-dockers"
 
 RUN \
 apk update && \

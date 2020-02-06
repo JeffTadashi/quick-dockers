@@ -2,7 +2,7 @@ FROM alpine:latest
 LABEL description="Subfinder\
 Authored by JeffTadashi\
 https://hub.docker.com/u/jefftadashi\
-https://github.com/JeffTadashi"
+https://github.com/JeffTadashi/quick-dockers"
 
 RUN \
 apk update && \

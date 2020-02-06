@@ -12,14 +12,17 @@ Simply install docker on your machine, then you can run the tools like the follo
 ```
 docker run --rm jefftadashi/nmap example.com
 ```
-See all the folders in this repository for the docker images that are available. Also check out my docker hub directly at:
+ Also check out my docker hub directly at:
 - https://hub.docker.com/u/jefftadashi
 
 ## Image List
 
+See all the folders in this repository for the docker images that are available, and see list below:
+
 Name | Description
 --- | ---
 dirsearch | Brute-force find directories in web servers
+evil-winrm | Shell through WinRM services 
 ldapsearch | Search LDAP directories
 nikto | Scan web servers for vulnerabilities
 nmap | Network port scanner (with included scripts)
@@ -27,3 +30,8 @@ smbclient | SMB protocol client
 sqlmap | Find/exploit SQL injection vulnerabilities in web servers
 subfinder | Find all subdomains
 whatweb | Web scanner to identify running services
+
+## Links
+
+GitHub: https://github.com/JeffTadashi/quick-dockers
+Docker Hub: https://hub.docker.com/u/jefftadashi
