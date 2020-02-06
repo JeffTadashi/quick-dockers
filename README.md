@@ -23,16 +23,16 @@ sudo usermod -aG docker your-local-username-here
 ## Usage
 From your command line or terminal, you can run the following (just substitute "nmap" with whatever image is available in the list, and specify whatever parameters afterwards)
 ```
-docker run --rm jefftadashi/nmap -p1-500 example.com
+docker run -it --rm jefftadashi/nmap -p1-500 example.com
 ```
 For mounting volumes to pass files to/from your current directory, try the following:
 ```
 [Linux/MacOS/Powershell]
-docker run --rm -v $(pwd):/root jefftadashi/nmap -p1-500 example.com
-docker run --rm -v ${PWD}:/root jefftadashi/nmap -p1-500 example.com
+docker run -it --rm -v $(pwd):/root jefftadashi/nmap -p1-500 example.com
+docker run -it --rm -v ${PWD}:/root jefftadashi/nmap -p1-500 example.com
 
 [Windows CMD]
-docker run --rm -v %cd%:/root jefftadashi/nmap -p1-500 example.com
+docker run -it --rm -v %cd%:/root jefftadashi/nmap -p1-500 example.com
 ```
 
 ## Image List
@@ -44,6 +44,7 @@ Name | Description
 altdns | Find subdomains based on patterns
 dirsearch | Brute-force find directories in web servers
 evil-winrm | Shell through WinRM services 
+hash-identifier | Identity passcode hash types
 ldapsearch | Search LDAP directories
 nikto | Scan web servers for vulnerabilities
 nmap | Network port scanner (with included scripts)
