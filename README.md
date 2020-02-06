@@ -12,8 +12,6 @@ Simply install docker on your machine, then you can run the tools like the follo
 ```
 docker run --rm jefftadashi/nmap example.com
 ```
- Also check out my docker hub directly at:
-- https://hub.docker.com/u/jefftadashi
 
 ## Image List
 
@@ -33,5 +31,5 @@ whatweb | Web scanner to identify running services
 
 ## Links
 
-GitHub: https://github.com/JeffTadashi/quick-dockers
+GitHub: https://github.com/JeffTadashi/quick-dockers  
 Docker Hub: https://hub.docker.com/u/jefftadashi
