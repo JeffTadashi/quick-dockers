@@ -1,6 +1,6 @@
 # JeffTadashi's Quick Dockers
 
-This is my collection of quick docker images for running simple network/security tools, without needed to hassle with manual installation, getting Python/Perl/Go dependencies installed, building, etc.
+This is my collection of easy-to-use docker images for running simple network/security tools, without needing to hassle with manual installation, getting Python/Perl/Go dependencies installed, building, etc.
 
 ## Features 
 Some features include:
