@@ -11,8 +11,9 @@ git clone https://github.com/sullo/nikto.git /opt/nikto && \
 ln -s /opt/nikto/program/nikto.pl /usr/local/bin/nikto && \
 apk del git
 
-WORKDIR /root
+RUN mkdir /vol
+VOLUME /vol
+WORKDIR /vol
 
 ENTRYPOINT ["nikto"]
-
 CMD [ "-Help"]
