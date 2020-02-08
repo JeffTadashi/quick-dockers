@@ -14,12 +14,12 @@ This is my collection of easy-to-use docker images for running simple network/se
 Install docker on your machine, and start its services. For Windows/OSX, use Docker Desktop:
 - https://www.docker.com/products/docker-desktop  
 
-For Linux hosts, you can install and auto-start services like the following Ubuntu example:
+For Linux hosts, you can install and auto-start services like the following Debian-based example:
 ```
 sudo apt install docker.io
-sudo systemctl start docker
-sudo systemctl enable docker
 sudo usermod -aG docker your-local-username-here
+sudo systemctl start docker
+sudo systemctl enable docke
 ```
 
 ## Usage
@@ -44,6 +44,7 @@ See all the folders in this repository for the docker images that are available,
 Name | Description
 --- | ---
 altdns | Find subdomains based on patterns
+curl | URL syntax data transfer
 dirsearch | Brute-force find directories in web servers
 evil-winrm | Shell through WinRM services 
 hash-identifier | Identity passcode hash types
@@ -53,6 +54,7 @@ nmap | Network port scanner (with included scripts)
 smbclient | SMB protocol client
 sqlmap | Find/exploit SQL injection vulnerabilities in web servers
 subfinder | Find subdomains based on external sources
+telnet | Basic Telnet client
 whatweb | Web scanner to identify running services
 
 ## Links
