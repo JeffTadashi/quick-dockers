@@ -8,8 +8,9 @@ RUN \
 apk update && \
 apk add --upgrade --no-cache openldap-clients
 
-WORKDIR /root
+RUN mkdir /vol
+VOLUME /vol
+WORKDIR /vol
 
 ENTRYPOINT ["ldapsearch"]
-
 CMD [ "--help"]

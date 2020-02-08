@@ -14,8 +14,9 @@ ln -s /opt/hash-identifier/hash-id.py /usr/local/bin/hash-identifier && \
 sed -i '1s/.*/\#\!\/usr\/bin\/python3/' /opt/hash-identifier/hash-id.py && \
 apk del git
 
-WORKDIR /root
+RUN mkdir /vol
+VOLUME /vol
+WORKDIR /vol
 
 ENTRYPOINT ["hash-identifier"]
-
 # CMD ["not needed, no arguments for this tool"]

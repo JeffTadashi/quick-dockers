@@ -14,8 +14,9 @@ bundle install && \
 ln -s /opt/whatweb/whatweb /usr/local/bin/whatweb && \
 apk del git ruby-dev build-base
 
-WORKDIR /root
+RUN mkdir /vol
+VOLUME /vol
+WORKDIR /vol
 
 ENTRYPOINT ["whatweb"]
-
 CMD [ "--help"]

@@ -10,8 +10,9 @@ apk add --upgrade --no-cache python2 py-pip && \
 pip install py-altdns && \
 apk del py-pip
 
-WORKDIR /root
+RUN mkdir /vol
+VOLUME /vol
+WORKDIR /vol
 
 ENTRYPOINT ["altdns"]
-
 CMD [ "--help"]

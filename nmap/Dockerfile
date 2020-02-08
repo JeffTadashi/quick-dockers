@@ -8,8 +8,9 @@ RUN \
 apk update && \
 apk add --upgrade --no-cache nmap nmap-scripts
 
-WORKDIR /root
+RUN mkdir /vol
+VOLUME /vol
+WORKDIR /vol
 
 ENTRYPOINT ["nmap"]
-
 CMD [ "-h"]

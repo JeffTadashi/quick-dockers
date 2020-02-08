@@ -13,9 +13,9 @@ ln -s /opt/sqlmap/sqlmap.py /usr/local/bin/sqlmap && \
 sed -i '1s/.*/\#\!\/usr\/bin\/python3/' /opt/sqlmap/sqlmap.py && \
 apk del git 
 
-
-WORKDIR /root
+RUN mkdir /vol
+VOLUME /vol
+WORKDIR /vol
 
 ENTRYPOINT ["sqlmap"]
-
 CMD [ "-h"]

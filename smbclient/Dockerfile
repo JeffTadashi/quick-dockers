@@ -8,8 +8,9 @@ RUN \
 apk update && \
 apk add --upgrade --no-cache samba-client
 
-WORKDIR /root
+RUN mkdir /vol
+VOLUME /vol
+WORKDIR /vol
 
 ENTRYPOINT ["smbclient"]
-
 CMD [ "--help"]

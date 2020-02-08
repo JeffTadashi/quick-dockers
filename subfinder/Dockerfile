@@ -12,8 +12,9 @@ mv /root/go/bin/subfinder /usr/local/bin && \
 rm -r /root/go && \
 apk del git go
 
-WORKDIR /root
+RUN mkdir /vol
+VOLUME /vol
+WORKDIR /vol
 
 ENTRYPOINT ["subfinder"]
-
 CMD [ "-h"]
