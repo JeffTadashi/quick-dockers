@@ -51,6 +51,7 @@ hash-identifier | Identity passcode hash types
 ldapsearch | Search LDAP directories
 nikto | Scan web servers for vulnerabilities
 nmap | Network port scanner (with included scripts)
+sherlock | Social media username scanner
 smbclient | SMB protocol client
 sqlmap | Find/exploit SQL injection vulnerabilities in web servers
 subfinder | Find subdomains based on external sources
