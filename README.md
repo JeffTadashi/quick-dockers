@@ -44,6 +44,7 @@ See all the folders in this repository for the docker images that are available,
 Name | Description
 --- | ---
 altdns | Find subdomains based on patterns
+ansible-playbook | Ansible automation tool
 curl | URL syntax data transfer
 dirsearch | Brute-force find directories in web servers
 evil-winrm | Shell through WinRM services 
@@ -54,7 +55,7 @@ nmap | Network port scanner (with included scripts)
 sherlock | Social media username scanner
 smbclient | SMB protocol client
 sqlmap | Find/exploit SQL injection vulnerabilities in web servers
-subfinder | Find subdomains based on external sources
+subfinder | Find DNS subdomains based on external sources
 telnet | Basic Telnet client
 whatweb | Web scanner to identify running services
 
